@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITD 212 - Dev Assignment 3 - Note Web App</title>
+</head>
+<body>
+    <!-- Header & Nav Bar -->
+    <header class="header" id="header">
+
+    </header>
+
+    <!-- Master Container div -->
+    <div class="container" id="master_container">
+
+        <div class="container" id="title">
+            <h1>Note-Taking App</h1>
+        </div>    
+        
+        <!-- Login page -->
+        <div class="container" id="login">
+
+        </div>
+
+        <!-- Create User page -->
+        <div class="container" id="createUser">
+
+        </div>
+
+        <!-- Default page -->
+        <div class="container" id="default">
+
+        </div>
+
+        <!-- Enter Tasks page -->
+        <div class="container" id="enterTasks">
+
+        </div>
+
+    </div>
+
+
+    <script>
+        // Placeholder JS
+        var express = require('express');
+        var app = express();
+
+        app.use(function(req, res, next) {    
+            res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");  
+        next();
+        });
+
+        var classes = [  
+        { school : 'TCC', location : "VB"},  
+        { school : 'W&M', location : "Williamsburg"},  
+        { school : 'ODU', location : "Norfolk"}
+        ];
+
+        app.get('/test', function (req, res) {  
+            res.json(classes);
+        })
+        app.listen(4000, function () {  
+            console.log('Listening on port 4000');
+        })
+
+    </script>
+</body>
+</html>
