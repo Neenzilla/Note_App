@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Color Palette variables */
+    /* Source: https://colorhunt.co/palette/273518 */
+:root {
+    /* Neutrals */
+    --floral_white: #f8f5f1;
+    --bisque: #FBE0C4;
+    --bunker: #222831;
+    /* Blues */
+    --light_blue: #8AB6D6;
+    --med_blue: #2978B5;
+    --cerulean: #0061A8;
+    --blue_magenta: #0a043c;
+
+}
+
+/* Header */
+
+/* Navbar */
+.navbar {
+    color: var(--floral_white);
+}
